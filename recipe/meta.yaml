@@ -1,5 +1,5 @@
 {% set name = "libcramjam" %}
-{% set version = "0.1.2" %}
+{% set version = "0.1.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://static.crates.io/crates/libcramjam/libcramjam-{{ version }}.crate
-  sha256: 68807397f8ea72def15d33d5dc4ff42abb728dc38a9458a5c55810a59a4553e0
+  sha256: d32d60fe9f9981baa7b323db407d941048f1f8619a20860886c733171e729dc2
 
 build:
   script_env:
@@ -34,7 +34,7 @@ about:
   home: https://crates.io/crates/libcramjam
   license: MIT
   license_family: MIT
-  license_file: 
+  license_file:
     - LICENSE
     - THIRDPARTY.yml
   summary: Library combining a plethera of compression algorithms in a similar as possible API
