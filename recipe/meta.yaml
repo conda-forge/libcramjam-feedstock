@@ -1,5 +1,5 @@
 {% set name = "libcramjam" %}
-{% set version = "0.1.5" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://static.crates.io/crates/libcramjam/libcramjam-{{ version }}.crate
-  sha256: e1e4c9711efb07b28423df4f7e87235f2e5b927f379e515062f7f1b37ef55b12
+  sha256: 45a1a8afbfdfd38e028da85e377178c3dcce4af6ea8fc8a0db0af6e20f36f643
 
 build:
   script_env:
