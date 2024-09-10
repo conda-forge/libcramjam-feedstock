@@ -24,6 +24,8 @@ requirements:
     - pkg-config                 # [unix]
     - cargo-bundle-licenses
     - cargo-c
+    - make
+    - cmake
 
 test:
   commands:
