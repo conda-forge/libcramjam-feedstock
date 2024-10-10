@@ -17,8 +17,9 @@ build:
 requirements:
   build:
     - {{ compiler('rust') }}
-    - {{ compiler('c') }}        # [unix]
-    - {{ compiler('m2w64_c') }}  # [win]
+    - {{ compiler('cxx') }}
+    - {{ compiler('c') }}
+    - {{ stdlib('c') }}
     - pkg-config                 # [unix]
     - cargo-bundle-licenses
     - cargo-c
@@ -26,7 +27,7 @@ requirements:
 test:
   commands:
     - test -e $PREFIX/include/cramjam/cramjam.h              # [unix]
-    - test -e $PREFIX/lib/libcramjam${SHLIB_EXT}                      # [unix]
+    - test -e $PREFIX/lib/libcramjam${SHLIB_EXT}             # [unix]
     - if not exist %LIBRARY_INC%\\cramjam\\cramjam.h exit 1  # [win]
     - if not exist %LIBRARY_BIN%\\cramjam.dll exit 1         # [win]
 
