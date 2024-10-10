@@ -18,7 +18,6 @@ requirements:
   build:
     - {{ compiler('rust') }}
     - {{ compiler('c') }}        # [unix]
-    - {{ stdlib("c") }}          # [unix]
     - {{ compiler('m2w64_c') }}  # [win]
     - pkg-config                 # [unix]
     - cargo-bundle-licenses
