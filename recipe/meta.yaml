@@ -1,5 +1,5 @@
 {% set name = "libcramjam" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://static.crates.io/crates/libcramjam/libcramjam-{{ version }}.crate
-  sha256: 45a1a8afbfdfd38e028da85e377178c3dcce4af6ea8fc8a0db0af6e20f36f643
+  sha256: 938e442c9cb43bfbc579e968e9a907be0bb0309441e6c9f00bb85a4c8db7bada
 
 build:
   script_env:
@@ -18,7 +18,9 @@ requirements:
   build:
     - {{ compiler('rust') }}
     - {{ compiler('c') }}        # [unix]
+    - {{ stdlib("c") }}          # [unix]
     - {{ compiler('m2w64_c') }}  # [win]
+    - {{ stdlib("c") }}          # [win]
     - pkg-config                 # [unix]
     - cargo-bundle-licenses
     - cargo-c
